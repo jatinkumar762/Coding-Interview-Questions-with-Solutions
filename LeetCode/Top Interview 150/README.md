@@ -12,5 +12,14 @@
 ### Medium
 
 1. [Remove Duplicates from Sorted Array II](../../Array/Medium/remove-duplicates-from-sorted-array-ii.md)
--[x] [Zigzag Conversion](../../String/Medium/zigzag-conversion.md)
+- [x] [Zigzag Conversion](../../String/Medium/zigzag-conversion.md)
+
+
+
+## HashMap
+
+### Easy
+
+- [x] [Word Pattern](../../HashMap/Easy/word-pattern.md)
+
 
