@@ -30,7 +30,17 @@ class Solution {
             index+=1;
         }
 
-        //if(openBracketIndexStack.size()>asterisksIndexStack.size()) return false;
+        /*
+        if(openBracketIndexStack.size()>asterisksIndexStack.size()) return false;
+
+        while(openBracketIndexStack.size()>0){
+
+            int openBracketIndex = openBracketIndexStack.pop();
+            int asterisksIndex = asterisksIndexStack.pop();
+
+            if(openBracketIndex>asterisksIndex) return false;
+        }
+        */
 
         while(!openBracketIndexStack.isEmpty() && !asterisksIndexStack.isEmpty()){
             if(openBracketIndexStack.pop()>asterisksIndexStack.pop()){
