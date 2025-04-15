@@ -15,7 +15,7 @@ class Solution
         // add your code here
         int plat_needed = 1, result = 1;
 
-        // run a nested  loop to find overlap
+        // run a nested  loop to find overlap   
         for (int i = 0; i < n; i++) {
             // minimum platform
             plat_needed = 1;
@@ -25,8 +25,7 @@ class Solution
                     // check for overlap
                     //If the arrival time of a train is between the arrival and departure 
                     //times of another train, it is considered as an overlap and a counter is incremented.
-                    if (arr[i] >= arr[j]
-                        && dep[j] >= arr[i])
+                    if (dep[i] >= arr[j] && dep[j] >= arr[i])
                         plat_needed++;
             }
 
