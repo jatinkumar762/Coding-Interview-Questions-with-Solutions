@@ -15,8 +15,9 @@ class Solution
     //Function to find the maximum profit and the number of jobs done.
     int[] JobScheduling(Job arr[], int n)
     {
-        // Your code here
-        Arrays.sort(arr, new JobSort());
+        // Sort jobs by descending profit
+        //Arrays.sort(arr, new JobSort());
+        Arrays.sort(jobs, (a, b) -> b.profit - a.profit);
         
         int[] jobPosition = new int[n+1];
         
