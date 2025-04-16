@@ -6,12 +6,9 @@ class Solution {
 
         int N = intervals.length;
 
-        // List<Interval> intervalList = new ArrayList<>();
-        // for (int i = 0; i < N; i++) {
-        //     intervalList.add(new Interval(intervals[i][0], intervals[i][1]));
-        // }
-
-        // Collections.sort(intervalList);
+        //minimum number of intervals
+        //so sorting based on end time
+        //(1, 40) (2, 6) (7, 10) (1, 12)
 
         Arrays.sort(intervals, (a, b) -> a[1] - b[1]);
 
