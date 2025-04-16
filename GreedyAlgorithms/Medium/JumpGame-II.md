@@ -3,7 +3,7 @@ https://leetcode.com/problems/jump-game-ii/description/
 * here we need to determine, maxJump can go
 * do next jump calculation, after checking all index of current maxJump and increase count +1
 
-#### Approach-1 `1ms`
+### Approach-1 `1ms`
 
 &rarr; here we can not track position, from where he jumped
 
@@ -104,6 +104,36 @@ class Solution {
             }
         }
         return position;
+    }
+}
+```
+
+### Approach-2 Basic
+
+```java
+class Solution {
+    public int jump(int[] nums) {
+
+        int n = nums.length;
+
+        int[] count = new int[n];
+        Arrays.fill(count, -1);
+
+        count[0] = 0;
+
+        for (int i = 0; i < n; i++) {
+
+            for (int j = 1; (i + j) < n && j <= nums[i]; j++) {
+
+                if (count[i + j] == -1) {
+                    count[i + j] = count[i] + 1;
+                } else {
+                    count[i + j] = Math.min(count[i] + 1, count[i + j]);
+                }
+            }
+        }
+
+        return count[n - 1];
     }
 }
 ```
