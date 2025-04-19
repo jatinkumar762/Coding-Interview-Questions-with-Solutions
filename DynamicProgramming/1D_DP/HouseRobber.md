@@ -38,135 +38,49 @@ class Solution {
 }
 ```
 
-### Top-Down (Memorization)
-
-```java
-class Solution {
-
-    int[] dp;
-
-    private int robHouse(int[] nums, int index) {
-
-        if (index == 0) {
-            dp[index] = nums[0];
-            return dp[index];
-        }
-
-        if (dp[index] != -1) {
-            return dp[index];
-        }
-
-        int max = nums[index], rob = Integer.MIN_VALUE;
-        for (int i = 1; i <= index; i++) {
-
-            if (i == 1) { //can't pick neighbor
-                rob = robHouse(nums, index - i);
-            } else {
-                rob = nums[index] + robHouse(nums, index - i);
-            }
-            max = max > rob ? max : rob;
-        }
-
-        dp[index] = max;
-
-        return dp[index];
-    }
-
-    public int rob(int[] nums) {
-
-        int N = nums.length;
-
-        dp = new int[N];
-
-        Arrays.fill(dp, -1);
-
-        return robHouse(nums, N - 1);
-    }
-}
-```
-
-#### Bottom-Up (Tabulation)
-
-```java
-class Solution {
-
-    int[] dp;
-    
-    public int rob(int[] nums) {
-
-        int N = nums.length;
-
-        if (N == 1) {
-            return nums[0];
-        } else if (N == 2) {
-            return nums[0] < nums[1] ? nums[1] : nums[0];
-        }
-
-        dp = new int[N];
-
-        dp[0] = nums[0];
-        dp[1] = nums[1];
-
-        for (int i = 2; i < N; i++) {
-
-            int max = dp[i - 1];
-
-            for (int j = 2; j <= i && j <= 3; j++) {
-                int tmp = nums[i] + dp[i - j];
-                max = max > tmp ? max : tmp;
-            }
-
-            dp[i] = max;
-        }
-
-        return dp[N - 1];
-    }
-}
-```
-
----
-
 ### Top-Down Approach (Similar to generate subsequence)
 
 ```java
 class Solution {
+    public int rob(int[] nums) {
 
-    int[] dp;
+        int n = nums.length;
 
-    private int robHouse(int[] nums, int index) {
+        if (n == 1) {
+            return nums[0];
+        }
 
-        if(index < 0){
+        if (n == 2) {
+            return nums[0] > nums[1] ? nums[0] : nums[1];
+        }
+
+        int[] dp = new int[n];
+        Arrays.fill(dp, -1);
+
+        findSum(nums, dp, n - 1);
+
+        return dp[n - 1];
+    }
+
+    private int findSum(int[] nums, int[] dp, int n) {
+
+        if (n < 0) {
             return 0;
         }
 
-        if (index == 0) {
-            dp[index] = nums[0];
-            return dp[index];
+        if (n == 0) {
+            return dp[n] = nums[n];
         }
 
-        if (dp[index] != -1) {
-            return dp[index];
+        if (dp[n] != -1) {
+            return dp[n];
         }
 
+        int take = nums[n] + findSum(nums, dp, n - 2);
 
-        int take = nums[index] + robHouse(nums, index-2);
+        int notTake = findSum(nums, dp, n - 1);
 
-        int notTake = robHouse(nums, index-1);
-        
-        dp[index] = take > notTake ? take : notTake;
-
-        return dp[index];
-    }
-
-    public int rob(int[] nums) {
-
-        int N = nums.length;
-
-        dp = new int[N];
-
-        Arrays.fill(dp, -1);
-
-        return robHouse(nums, N - 1);
+        return dp[n] = take > notTake ? take : notTake;
     }
 }
 ```
