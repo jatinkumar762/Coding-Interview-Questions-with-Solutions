@@ -1,6 +1,44 @@
 https://leetcode.com/problems/house-robber/description/
 
-#### Top-Down (Memorization)
+### Recursive Solution - TLE
+
+```java
+class Solution {
+    public int rob(int[] nums) {
+
+        int n = nums.length;
+
+        if (n == 1) {
+            return nums[0];
+        }
+
+        if (n == 2) {
+            return nums[0] > nums[1] ? nums[0] : nums[1];
+        }
+
+        return findSum(nums, 0, n);
+    }
+
+    private int findSum(int[] nums, int index, int n) {
+
+        if (index >= n) {
+            return 0;
+        }
+
+        if (index == n - 1) {
+            return nums[index];
+        }
+
+        int take = nums[index] + findSum(nums, index + 2, n);
+
+        int notTake = findSum(nums, index + 1, n);
+
+        return take > notTake ? take : notTake;
+    }
+}
+```
+
+### Top-Down (Memorization)
 
 ```java
 class Solution {
