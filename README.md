@@ -416,7 +416,7 @@
   ### 1D DP
   - [x] [Introduction to DP](./DynamicProgramming/1D_DP/Introduction_to_DP.md)
   - [x] [Climbing Stairs](./DynamicProgramming/1D_DP/ClimbingStairs.md)
-  - [x] [Geek Jump](./DynamicProgramming/1D_DP/GeekJump.md)
+  - [x] [Frog Jump](./DynamicProgramming/1D_DP/GeekJump.md)
   - [x] [Frog Jump with k Distances](./DynamicProgramming/1D_DP/Frog_Jump_with_k_Distances.md)
   - [x] [House Robber](./DynamicProgramming/1D_DP/HouseRobber.md)
   - [x] [Perfect Square](./DynamicProgramming/1D_DP/PerfectSquare.md)
