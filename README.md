@@ -434,7 +434,7 @@
   - [x] [Subset Sum Problem](./DynamicProgramming/DP_on_Subsequences/SubsetSumProblem.md)
   - [ ] [Partition Equal Subset Sum](./DynamicProgramming/DP_on_Subsequences/PartitionEqualSubsetSum.md)
   - [ ] [Partition Array Into Two Arrays to Minimize Sum Difference](./DynamicProgramming/DP_on_Subsequences/PartitionArrayIntoTwoArraystoMinimizeSumDifference.md)
-  - [x] [Perfect Sum Problem](./DynamicProgramming/DP_on_Subsequences/PerfectSumProblem.md)
+  - [x] [Perfect Sum Problem/Count Subsets with Sum K](./DynamicProgramming/DP_on_Subsequences/PerfectSumProblem.md)
   - [x] [Partitions with Given Difference](./DynamicProgramming/DP_on_Subsequences/PartitionswithGivenDifference.md)
   - [x] [Coin Change](./DynamicProgramming/DP_on_Subsequences/CoinChange.md)
   - [x] [Target Sum](./DynamicProgramming/DP_on_Subsequences/TargetSum.md)
