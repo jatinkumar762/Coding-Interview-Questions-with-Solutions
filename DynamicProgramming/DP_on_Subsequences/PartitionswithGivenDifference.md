@@ -45,7 +45,7 @@ class Solution {
         // code here
         
         /*
-            1. S1 + S2 = totalSum
+            1. S1 + S2 = totalSum of arr elements
             2. in ques S1>=S2 and S1-S2 = d
             3. from 1 -> S2 + d + S2 = totalSum
             4. S2 = (totalSum-d)/2
