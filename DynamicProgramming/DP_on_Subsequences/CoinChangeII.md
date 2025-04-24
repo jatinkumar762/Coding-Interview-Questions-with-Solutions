@@ -24,6 +24,8 @@ class Solution {
             return 1;
         }
 
+        //1 <= coins[i] <= 5000 not 0
+        //so we can stop
         if (index == 0) {
             if (amount % coins[index] == 0) {
                 return 1; // 1 way
