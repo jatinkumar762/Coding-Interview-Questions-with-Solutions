@@ -116,3 +116,46 @@ class Solution {
 }
 ```
 
+### Approach-3 Bottom-Up DP (Tabulation)
+
+```java
+class Solution {
+    public int minDistance(String word1, String word2) {
+
+        int m = word1.length();
+        int n = word2.length();
+
+        int[][] dp = new int[m + 1][n + 1];
+
+        // Fill the first row and column (base cases)
+        for (int i = 0; i <= m; i++) {
+            dp[i][0] = i; // Deleting all characters from word1
+        }
+
+        for (int j = 0; j <= n; j++) {
+            dp[0][j] = j; // Inserting all characters to word1
+        }
+
+        // Fill the rest of the table
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+
+                if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
+                    // Characters match, no operation needed
+                    dp[i][j] = dp[i - 1][j - 1];
+                } else {
+                    // Try insert, delete, replace
+                    int insert = dp[i][j - 1] + 1;
+                    int delete = dp[i - 1][j] + 1;
+                    int replace = dp[i - 1][j - 1] + 1;
+
+                    dp[i][j] = Math.min(insert, Math.min(delete, replace));
+                }
+            }
+        }
+
+        return dp[m][n];
+    }
+}
+```
+
