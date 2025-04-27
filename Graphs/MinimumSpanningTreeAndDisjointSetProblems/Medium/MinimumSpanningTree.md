@@ -65,6 +65,8 @@ class Solution {
                 continue;
             }
             
+            //e[0] -> dest
+            //e[1] -> weight
             for(int[] e : adj.get(vertex)){
                 if(!visited[e[0]]){
                     pq.add(new Edge(vertex, e[0], e[1]));
