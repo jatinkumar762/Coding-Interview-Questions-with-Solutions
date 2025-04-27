@@ -71,3 +71,48 @@ This is because:
 - At each step, 3 recursive calls are made (Insert, Delete, Replace)
 - The depth of the recursion is roughly m + n
 
+### Approach-2 Top-Down
+
+```java
+class Solution {
+    public int minDistance(String word1, String word2) {
+
+        int len1 = word1.length();
+        int len2 = word2.length();
+
+        // Memoization array, initialize with -1 (means not computed)
+        int[][] dp = new int[len1][len2];
+
+        // Fill dp with -1
+        for (int i = 0; i < len1; i++) {
+            for (int j = 0; j < len2; j++) {
+                dp[i][j] = -1;
+            }
+        }
+
+        return calMin(word1.toCharArray(), word2.toCharArray(), len1 - 1, len2 - 1, dp);
+    }
+
+    private int calMin(char[] arr1, char[] arr2, int i, int j, int[][] dp) {
+
+        // Base cases
+        if (i < 0) return j + 1; // Need to insert remaining characters of word2
+        if (j < 0) return i + 1; // Need to delete remaining characters of word1
+
+        // Check memo table
+        if (dp[i][j] != -1) return dp[i][j];
+
+        if (arr1[i] == arr2[j]) {
+            dp[i][j] = calMin(arr1, arr2, i - 1, j - 1, dp); // Characters match, move on
+        } else {
+            int insert = 1 + calMin(arr1, arr2, i, j - 1, dp);
+            int delete = 1 + calMin(arr1, arr2, i - 1, j, dp);
+            int replace = 1 + calMin(arr1, arr2, i - 1, j - 1, dp);
+            dp[i][j] = Math.min(insert, Math.min(delete, replace));
+        }
+
+        return dp[i][j];
+    }
+}
+```
+
