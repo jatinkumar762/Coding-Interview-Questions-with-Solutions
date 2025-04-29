@@ -53,3 +53,83 @@ class Solution {
     }
 }
 ```
+
+### Top-Down
+
+**Note: Test Case**
+
+s = ""
+p = "****"
+
+if we dp[len1-1][len2-1], index -1 out of bound exception can come
+
+return dp[len1-1][len2-1] == 1
+
+```java
+class Solution {
+    public boolean isMatch(String s, String p) {
+
+        char[] arr1 = s.toCharArray();
+        char[] arr2 = p.toCharArray();
+
+        int len1 = s.length();
+        int len2 = p.length();
+
+        int[][] dp = new int[len1][len2];
+
+        for (int[] row : dp) {
+            Arrays.fill(row, -1);
+        }
+
+        return wildcardMatching(arr1, arr2, len1 - 1, len2 - 1, dp) == 1;
+    }
+
+    private int wildcardMatching(char[] arr1, char[] arr2, int i, int j, int[][] dp) {
+
+        if (i < 0 && j >= 0) {
+
+            while (j >= 0 && arr2[j] == '*') {
+                j--;
+            }
+
+            return j < 0 ? 1 : 0;
+        }
+
+        if (i < 0 && j < 0) {
+            return 1;
+        }
+
+        if (i >= 0 && j < 0) {
+            return 0;
+        }
+
+        if (dp[i][j] != -1) {
+            return dp[i][j];
+        }
+
+        if (arr1[i] == arr2[j] || arr2[j] == '?') {
+
+            return dp[i][j] = wildcardMatching(arr1, arr2, i - 1, j - 1, dp);
+
+        } else if (arr2[j] == '*') {
+
+            //case-1: * matched with s char
+            //case-2: * considered as empty
+            int case1 = wildcardMatching(arr1, arr2, i - 1, j, dp);
+
+            if (case1 == 1) {
+                return dp[i][j] = 1;
+            }
+
+            int case2 = wildcardMatching(arr1, arr2, i, j - 1, dp);
+
+            return dp[i][j] = case2;
+        }
+        // } else if (arr1[i] != arr2[j]) {
+        //     return false;
+        // }
+
+        return dp[i][j] = 0;
+    }
+}
+```
