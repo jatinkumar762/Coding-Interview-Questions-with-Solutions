@@ -216,3 +216,5 @@ class Solution {
     }
 }
 ```
+
+**Next task** -> space optimization
