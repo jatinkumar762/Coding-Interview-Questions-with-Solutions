@@ -133,3 +133,86 @@ class Solution {
     }
 }
 ```
+
+### Bottom-Up 
+
+
+s =
+"aab"
+
+p =
+"c*a*b"
+
+Output: false
+
+Expected: false
+
+* s = "aab" → treated as ["", "a", "a", "b"]
+
+* p = "c*a*b" → treated as ["", "c", "*", "a", "*", "b"]
+
+
+
+|       s \ p       |  ""  |  c  |  *  |  a  |  *  |  b  |
+|------------------|------|-----|-----|-----|-----|-----|
+| **""** (s[0])     |      |     |     |     |     |     |
+| **"a"** (s[1])    |      |     |     |     |     |     |
+| **"a"** (s[2])    |      |     |     |     |     |     |
+| **"b"** (s[3])    |      |     |     |     |     |     |
+
+
+</br>
+
+|      s \ p     | "" | c | * | a | * | b |
+|----------------|----|---|---|---|---|---|
+| **""**         | T  | F | F | F | F | F |
+| **"a"**        | F  | F | F | F | F | F |
+| **"aa"**       | F  | F | F | F | F | F |
+| **"aab"**      | F  | F | F | F | F | F |
+
+
+```java
+class Solution {
+    public boolean isMatch(String s, String p) {
+
+        char[] arr1 = s.toCharArray();
+        char[] arr2 = p.toCharArray();
+
+        int len1 = s.length();
+        int len2 = p.length();
+
+        //default false
+        boolean[][] dp = new boolean[len1 + 1][len2 + 1];
+        dp[0][0] = true;
+
+        for (int i = 1; i <= len1; i++) {
+            dp[i][0] = false;
+        }
+
+        for (int j = 1; j <= len2; j++) {
+
+            if (arr2[j - 1] == '*') {
+                dp[0][j] = dp[0][j-1];
+            } else {
+                dp[0][j] = false;
+            }
+
+        }
+
+        for (int i = 1; i <= len1; i++) {
+            for (int j = 1; j <= len2; j++) {
+
+                if (arr1[i - 1] == arr2[j - 1] || arr2[j - 1] == '?') {
+                    dp[i][j] = dp[i - 1][j - 1];
+                } else if (arr2[j - 1] == '*') {
+                    dp[i][j] = dp[i - 1][j] || dp[i][j - 1];
+                } else {
+                    dp[i][j] = false;
+                }
+            }
+        }
+
+        return dp[len1][len2];
+    }
+}
+```
