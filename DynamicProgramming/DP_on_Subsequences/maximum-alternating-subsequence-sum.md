@@ -1,5 +1,10 @@
 https://leetcode.com/problems/maximum-alternating-subsequence-sum/description/
 
+**Similar Problems**
+
+* https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/editorial/
+
+
 ### Recursion
 
 **Top-down**
