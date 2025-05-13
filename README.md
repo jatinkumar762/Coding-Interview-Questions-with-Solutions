@@ -138,7 +138,7 @@
   - [x] [Delete all occurrences of a given key in a doubly linked list](./LinkedList/DLL/DeleteAllOccurrencesOfKey.md)
   - [x] [Find pairs with given sum in doubly linked list](./LinkedList/DLL/FindPairSumDLL.md)
 
-## [Array Problems](./Array/README.md) 
+  ## [Array Problems](./Array/README.md) 
 
   ### Easy
   - [x] [Max and Min with minimum number of comparison](https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/)
