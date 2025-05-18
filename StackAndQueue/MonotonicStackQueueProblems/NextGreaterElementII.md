@@ -6,7 +6,7 @@ https://leetcode.com/problems/next-greater-element-ii/description/
 * Loop twice, we can get the Next Greater Number of a circular array
 
 
-#### Approach-1 18ms 
+### Approach-1 18ms 
 
 ```java
 class Solution {
@@ -18,7 +18,7 @@ class Solution {
         Arrays.fill(res, -1);
 
         Stack<Integer> stack = new Stack<>();
-       
+        // we store index of num array in stack to avoid duplicate elements
 
         for(int i=2*N-1; i>=0; i--){
             
@@ -39,7 +39,7 @@ class Solution {
 }
 ```
 
-#### Approach-2 15ms
+### Approach-2 15ms
 
 ```java
 class Solution {
@@ -57,6 +57,26 @@ class Solution {
                 res[stack.pop()] = nums[i%N];
             }
             stack.push(i % N);
+        }
+        return res;
+    }
+}
+```
+
+### Leetcode solution
+
+```java
+class Solution {
+    public int[] nextGreaterElements(int[] nums) {
+
+        int[] res = new int[nums.length];
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 2 * nums.length - 1; i >= 0; --i) {
+            while (!stack.empty() && nums[stack.peek()] <= nums[i % nums.length]) {
+                stack.pop();
+            }
+            res[i % nums.length] = stack.empty() ? -1 : nums[stack.peek()];
+            stack.push(i % nums.length);
         }
         return res;
     }
