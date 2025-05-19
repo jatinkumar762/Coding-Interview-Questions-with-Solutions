@@ -400,6 +400,7 @@
   - [x] [Minimum number of Coins](./GreedyAlgorithms/Easy/Greedy_MinimumNumberOfCoins.md)
   - [x] [N meetings in one room](./GreedyAlgorithms/Easy/N_Meetings_In_One_Room.md)
   - [x] [Shortest Job first](./GreedyAlgorithms/Easy/ShortestJobFirst.md)
+  - [x] [Minimum Domino Rotations For Equal Row](./GreedyAlgorithms/Easy/minimum-domino-rotations-for-equal-row.md)
 
   ### Medium
   - [x] 🔥[Valid Parenthesis String](./GreedyAlgorithms/Medium/ValidParenthesisString.md)
