@@ -73,19 +73,19 @@ left subarray which contains 1 are (1 - (-1)) = 2 &larr; -1 bcz no previous less
 3\
 {}
 
-right subarray which contains 2 are (4 - 1) = 3 &larr; 4 bcz no next less element present
+right subarray which contains 1 are (4 - 1) = 3 &larr; 4 bcz no next less element present
 
 1\
 1 2\
 1 2 4
 
-total &rarr; 2 * 3 = 6
+total &rarr; 2 * 3 = 6, see below how left combined with right
 
 3 1\
 3 1 2\
 3 1 2 4
 
-when combine empty,
+and when combine empty,
 
 1\
 1 2\
