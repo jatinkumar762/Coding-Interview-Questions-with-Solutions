@@ -358,11 +358,11 @@
   - [x] [Binary Heap Operations](./Heap/Learning/operations-on-binary-min-heap.md)
 
   ### Medium
-  - [x] [Find K Closest Elements](./Heap/Medium/KClosestElements.md)
   - [x] [Kth Largest Element in an Array](./Heap/Medium/KthLargestElement.md)
   - [x] [Kth smallest element in an array](./Heap/Medium/KthSmallestElement.md)
   - [x] [Kth Largest Element in a Stream](./Heap/Medium/kth-largest-element-in-a-stream.md)
   - [x] [K largest elements](./Heap/Medium/K_LargestElements.md)
+  - [x] [Find K Closest Elements](./Heap/Medium/KClosestElements.md)
   - [x] [Nearly sorted](./Heap/Medium/NearlySorted.md)
   - [x] [Merge k Sorted Arrays](./Heap/Medium/merge-k-sorted-arrays.md)
   - [x] [Merge k Sorted Lists](./Heap/Medium/merge-k-sorted-lists.md)
