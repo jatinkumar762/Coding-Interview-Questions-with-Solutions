@@ -413,6 +413,7 @@
   - [x] [Insert Interval](./GreedyAlgorithms/Medium/InsertInterval.md)
   - [x] [Merge Intervals](./GreedyAlgorithms/Medium/MergeIntervals.md)
   - [x] [Non-overlapping Intervals](./GreedyAlgorithms/Medium/Non-overlappingIntervals.md)
+  - [x] [Minimum Number of Arrows to Burst Balloons](./GreedyAlgorithms/Medium/minimum-number-of-arrows-to-burst-balloons.md)
 
 ## Dynamic Programming
   ### 1D DP
