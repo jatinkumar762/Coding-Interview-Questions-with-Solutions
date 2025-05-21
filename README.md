@@ -156,6 +156,7 @@
 
   ### Medium
   - [x] [Two Sum Problem](./Array/Medium/two-sum.md)
+  - [x] [Two Sum II - Input Array Is Sorted](./Array/Medium/two-sum-ii-input-array-is-sorted.md)
   - [x] [3-Sum Problem](./Array/Medium/3Sum.md)
   - [x] [Largest subarray with 0 sum](./Array/Medium/LargestSubarrayWith0Sum.md)
   - [x] [Longest Sub-Array with Sum K](./Array/Medium/LongestSub-ArrayWithSumK.md)
