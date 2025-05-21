@@ -29,11 +29,7 @@ class Solution {
                 int complement = target - nums[j];
 
                 if (numSet.contains(complement)) {
-                    List<Integer> tmp = new ArrayList<>();
-                    tmp.add(nums[i]);
-                    tmp.add(complement);
-                    tmp.add(nums[j]);
-                    result.add(tmp);
+                    result.add(Arrays.asList(nums[i], complement, nums[j]));
 
                     while (j < n - 1 && nums[j] == nums[j + 1]) {
                         j++;
