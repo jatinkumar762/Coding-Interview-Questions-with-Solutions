@@ -10,11 +10,12 @@ class Solution {
         int target = 0;
         int n = nums.length;
 
+        //to avoid duplicates
         Arrays.sort(nums);
 
-        Set<List<Integer>> result = new HashSet<>();
+        List<List<Integer>> result = new ArrayList<>();
 
-        for (int i = 0; i < n - 2; i++) {
+        for (int i = 0; i < n - 2 && nums[i] <= 0; i++) {
 
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
@@ -22,6 +23,7 @@ class Solution {
 
             Set numSet = new HashSet<>();
             target = 0 - nums[i];
+
             for (int j = i + 1; j < n; j++) {
 
                 int complement = target - nums[j];
@@ -32,12 +34,16 @@ class Solution {
                     tmp.add(complement);
                     tmp.add(nums[j]);
                     result.add(tmp);
+
+                    while (j < n - 1 && nums[j] == nums[j + 1]) {
+                        j++;
+                    }
                 }
                 numSet.add(nums[j]);
             }
         }
 
-        return new ArrayList<>(result);
+        return result;
     }
 }
 ```
