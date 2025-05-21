@@ -155,7 +155,8 @@
   - [x] [Longest subarray with sum K (Positives + Negatives)](./Array/Easy/LongestSub-ArrayWithSumK.md)
 
   ### Medium
-  - [x] [3Sum](./Array/Medium/3Sum.md)
+  - [x] [Two Sum Problem](./Array/Medium/two-sum.md)
+  - [x] [3-Sum Problem](./Array/Medium/3Sum.md)
   - [x] [Largest subarray with 0 sum](./Array/Medium/LargestSubarrayWith0Sum.md)
   - [x] [Longest Sub-Array with Sum K](./Array/Medium/LongestSub-ArrayWithSumK.md)
   - [x] [Majority Element - Boyer-Moore Voting Algorithm](./Array/Medium/Boyer-MooreVotingAlgorithm.md)
