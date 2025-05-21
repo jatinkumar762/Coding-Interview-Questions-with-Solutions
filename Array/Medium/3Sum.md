@@ -55,7 +55,11 @@ class Solution {
 
         List<List<Integer>> result = new ArrayList<>();
 
-        for (int i = 0; i < n - 2; i++) {
+        /*
+            why nums[i]<=0 in for loop, bcz array already sorted
+            next element will be grater only, so sum can not be 0
+        */
+        for (int i = 0; i < n - 2 && nums[i] <=0; i++) {
 
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
