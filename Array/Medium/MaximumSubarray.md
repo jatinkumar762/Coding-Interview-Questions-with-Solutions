@@ -3,6 +3,8 @@
 * Kadane's Algorithm is a well-known algorithm used to solve the "Maximum Subarray Sum Problem"
 * the goal is to find the contiguous subarray within a one-dimensional array of numbers that has the largest sum.
 
+### Print subarray with maximum subarray sum
+
 ```java
 class Solution {
     public int maxSubArray(int[] nums) {
@@ -39,22 +41,23 @@ class Solution {
 ```java
 class Solution {
     public int maxSubArray(int[] nums) {
-        
-         // Your code here
-        int maxSum = nums[0];
-        int sum = maxSum;
-        
-        for(int i=1;i<nums.length;i++){
-            if(sum+nums[i]<nums[i])
+
+        int maxSum = nums[0], sum = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+
+            sum += nums[i];
+
+            if (sum < nums[i]) {
                 sum = nums[i];
-            else
-                sum += nums[i];
-            
-            if(maxSum<sum)
+            }
+
+            if (maxSum < sum) {
                 maxSum = sum;
+            }
         }
+
         return maxSum;
-        
     }
 }
 ```
