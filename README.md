@@ -138,7 +138,7 @@
   - [x] [Delete all occurrences of a given key in a doubly linked list](./LinkedList/DLL/DeleteAllOccurrencesOfKey.md)
   - [x] [Find pairs with given sum in doubly linked list](./LinkedList/DLL/FindPairSumDLL.md)
 
-  ## [Array Problems](./Array/README.md) 
+## [Array Problems](./Array/README.md) 
 
   ### Easy
   - [x] [Max and Min with minimum number of comparison](https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/)
@@ -150,7 +150,6 @@
   - [x] [Find Pivot Index](./Array/Easy/FindPivotIndex.md)
   - [x] [Max Consecutive Ones II](./Array/Easy/MaxConsecutiveOnesII.md)
   - [x] [Pascal's Triangle](./Array/Easy/Pascal'sTriangle.md)
-  - [x] [Rearrange Array Elements by Sign](./Array/Easy/RearrangeArrayElementsbySign.md)
   - [x] [Find missing number in an array](./Array/Easy/Find_missing_number_in_an_array.md)
   - [x] [Longest subarray with sum K (Positives + Negatives)](./Array/Easy/LongestSub-ArrayWithSumK.md)
 
