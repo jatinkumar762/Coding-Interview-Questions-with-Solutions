@@ -3,7 +3,7 @@
 * Kadane's Algorithm is a well-known algorithm used to solve the "Maximum Subarray Sum Problem"
 * the goal is to find the contiguous subarray within a one-dimensional array of numbers that has the largest sum.
 
-### Print subarray with maximum subarray sum
+### Print sub-array with maximum sub-array sum
 
 ```java
 class Solution {
