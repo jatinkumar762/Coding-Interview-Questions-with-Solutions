@@ -297,6 +297,7 @@
   - [x] [Online Stock Span](./StackAndQueue/Medium/OnlineStockSpan.md)
   - [x] [The Celebrity Problem](./StackAndQueue/Medium/TheCelebrityProblem.md)
   - [x] [LRU Cache](./StackAndQueue/Medium/LRUCache.md)
+  - [x] [Ternary Expression Parser](./StackAndQueue/Medium/ternary-expression-parser.md)
 
 ## Binary Tree
 
