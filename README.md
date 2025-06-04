@@ -203,7 +203,7 @@
    - [x] [Roman Number to Integer and vice versa](./String/Easy/RomanNumbertoInteger.md)
    - [x] [Print Anagrams Together](./String/Easy/Print%20Anagrams%20Together.md)
    - [x] [Isomorphic Strings](./String/Easy/Isomorphic%20Strings.md)
-   - [x] [Remove outermost Parentheses](./String/Easy/RemoveOutermostParanthesis.md)
+   - [x] [Remove outermost Parentheses](./String/Easy/remove-outermost-parentheses.md)
    - [x] [String to Integer (atoi)](./String/Easy/StringToInteger.md)
    - [x] [Sort Characters By Frequency](./String/Medium/SortCharactersByFrequency.md)
    - [x] [Maximum Nesting Depth of Parentheses](./String/Easy/MaximumNestingDepthofParanthesis.md)
