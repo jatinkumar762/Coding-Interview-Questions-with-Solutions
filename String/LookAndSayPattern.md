@@ -1,43 +1,58 @@
-[Problem Link](https://practice.geeksforgeeks.org/problems/decode-the-pattern1138/1#)
+https://www.geeksforgeeks.org/problems/decode-the-pattern1138/1
 
 ```java
 
-class Solution{
-    static String readOff(String input){
+class Solution {
+    public String countAndSay(int n) {
+        // code here
         
-        char ch = input.charAt(0);
-        int count = 1;
+        String res = new String("");
         
-        String output = "";
-        
-        for(int i=1;i<input.length();i++){
+        while(n > 0){
             
-            if(ch==input.charAt(i)){
-                count++;
-            }
-            else {
-                output += count;
-                output += ch;
-                
-                count = 1;
-                ch = input.charAt(i);
-            }
+            res = getNextStr(res);
+            
+            n--;
         }
-        output += count;
-        output += ch;
         
-        return output;
+        return res;
     }
     
-    static String lookandsay(int n) {
-        //your code here
+    private String getNextStr(String res){
         
-        String out = "1";
-        for(int i=1;i<n;i++){
-            out = readOff(out);
+        
+        if(res.length() == 0){
+            return "1";
         }
-        return out;
+        
+        StringBuilder newRes = new StringBuilder("");
+        
+        char curr = ' ';
+        int count = 0;
+        for(int i = 0; i < res.length(); i++){
+            
+            if(i == 0){
+                curr = res.charAt(i);
+                count++;
+            } else if(curr == res.charAt(i)){
+                count++;
+            } else {
+                
+                newRes.append(count);
+                newRes.append(curr);
+                
+                curr = res.charAt(i);
+                count = 1;
+            }
+            
+        }
+        
+        newRes.append(count);
+        newRes.append(curr);
+        
+        return newRes.toString();
     }
 }
+
 
 ```
