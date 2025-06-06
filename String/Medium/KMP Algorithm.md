@@ -173,6 +173,93 @@ Result: Pattern is found at indices `0` and `6`.
 
 ---
 
+https://leetcode.com/problems/rotate-string/description/
+
+
+* solve using kmp, if contains function not allowed
+
+```java
+class Solution {
+
+    public boolean rotateString(String s, String goal) {
+
+        if(s.length()!=goal.length()){
+            return false;
+        }
+
+        String ss = s + s;
+
+        int[] prefixSuffixArray = prefixSuffixArray(goal);
+        
+        //System.out.println(Arrays.toString(prefixSuffixArray));
+
+        return checkSubStringPresent(ss, goal, prefixSuffixArray);
+    }
+
+    private boolean checkSubStringPresent(String str, String subStr, int[] prefixSuffixArray) {
+
+        int strLen = str.length();
+        int subStrLen = subStr.length();
+
+        for(int i=0, j=0; i < strLen; ){
+
+            if(str.charAt(i) == subStr.charAt(j)){
+                j++;
+                i++;
+            } else {
+
+                if(j!=0){
+
+                    //why j-1, bcz till j-1 and i-1, already matching
+                    j = prefixSuffixArray[j-1];
+                } else {
+                    i++;
+                }
+
+            }
+
+            if(j == subStrLen) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private int[] prefixSuffixArray(String pattern) {
+
+        int len = pattern.length();
+
+        int[] prefixSuffixArray = new int[len];
+
+        prefixSuffixArray[0] = 0; //overlapping but not self
+
+        for (int left = 0, right = 1; right < len;) {
+
+            if (pattern.charAt(left) == pattern.charAt(right)) {
+                prefixSuffixArray[right] = left + 1; //length
+                left++;
+                right++;
+            } else {
+
+                if (left != 0) {
+                    left = prefixSuffixArray[left-1];
+                } else {
+                    prefixSuffixArray[right] = 0;
+                    right++;
+                }
+            }
+        }
+
+        return prefixSuffixArray;
+    }
+}
+```
+
+
+
+---
+
 ### Implementation in Java
 
 ```java
