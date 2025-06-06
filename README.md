@@ -206,7 +206,6 @@
    - [x] [Remove outermost Parentheses](./String/Easy/remove-outermost-parentheses.md)
    - [x] [String to Integer (atoi)](./String/Easy/StringToInteger.md)
    - [x] [Sort Characters By Frequency](./String/Medium/SortCharactersByFrequency.md)
-   - [x] [Maximum Nesting Depth of Parentheses](./String/Easy/MaximumNestingDepthofParanthesis.md)
    - [x] [Minimum Add to Make Parentheses Valid](./String/Easy/minimum-add-to-make-parentheses-valid.md)
    - [x] [Count and Say](./String/Easy/count-and-say.md)
 
