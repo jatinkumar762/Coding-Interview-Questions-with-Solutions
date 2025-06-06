@@ -192,7 +192,6 @@
 ## String
    ### Easy
    - [x] [Longest K unique characters substring](./String/LongestKUniqueCharactersSubstring.md)
-   - [x] [Isomorphic Strings](./String/IsomorphicStrings.md)
    - [x] [Shuffle String](./String/ShuffleString.md)
    - [x] [Look and Say Pattern](./String/LookAndSayPattern.md)
    - [x] [Remove all consecutive duplicates from the string](./String/RemoveAdjacentDuplicates.md)
