@@ -4,38 +4,38 @@ https://practice.geeksforgeeks.org/problems/longest-k-unique-characters-substrin
 class Solution {
     public int longestkSubstr(String s, int k) {
         // code here
-        
-        Map<Character, Integer> uniqCount = new HashMap<Character, Integer>();
+        Map<Character, Integer> uniqCount = new HashMap<>();
         
         int maxLen = -1;
-        int start = 0;
+        int left = 0;
         
-        for(int i=0;i<s.length();i++){
+        int length = s.length();
+        
+        for(int right=0; right<length; right++){
             
-            int count = 0;
-            if(uniqCount.size()>0 && uniqCount.containsKey(s.charAt(i)))
-                count = uniqCount.get(s.charAt(i));
-            
-            uniqCount.put(s.charAt(i), count+1);
+    
+            uniqCount.put(s.charAt(right), uniqCount.getOrDefault(s.charAt(right), 0) + 1);
                 
 
-            count = 0;
-            while(uniqCount.size()>k){
+            int count = 0;
             
-               count = uniqCount.get(s.charAt(start));
+            while(uniqCount.size() > k) {
+            
+               count = uniqCount.get(s.charAt(left));
                
-               if(count==1){
-                   uniqCount.remove(s.charAt(start));
+               if(count==1) {
+                   uniqCount.remove(s.charAt(left));
                }
                else{
-                   uniqCount.put(s.charAt(start), count-1);
+                   uniqCount.put(s.charAt(left), count - 1);
                }
-               start++;
+               
+               left++;
             }
                 
                             
-            if(uniqCount.size() == k && maxLen<(i-start+1) ){
-                maxLen = i-start+1;
+            if(uniqCount.size() == k && maxLen < (right-left+1)) {
+                maxLen = right-left+1;
             }   
             
         }
