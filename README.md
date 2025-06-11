@@ -301,7 +301,7 @@
 
   ### Easy
 
-  - [x] [Maximum depth of binary tree](./BinaryTree/Easy/MaximumDepth.md)
+  - [x] [Height of a Binary Tree/Maximum depth of binary tree](./BinaryTree/Easy/MaximumDepth.md)
   - [x] [Balanced Binary Tree](./BinaryTree/Easy/BalancedBinaryTree.md)
   - [x] [Diameter of Binary Tree](./BinaryTree/Easy/DiameterBinaryTree.md)
   - [x] [Same Tree](./BinaryTree/Easy/SameTree.md)
