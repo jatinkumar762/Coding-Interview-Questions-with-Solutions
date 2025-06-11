@@ -30,7 +30,7 @@ class Solution
         
         Map<Integer, Integer> indexMap = new TreeMap<>();
         
-        while(queue.size()>0){
+        while(!queue.isEmpty()){
             
             NodeIndex nodeIndex = queue.poll();
             Node node = nodeIndex.root;
