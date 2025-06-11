@@ -2,12 +2,12 @@ https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/descript
 
 ### Approach-1 Level Order Traversal + Map
 
-* 5ms Beats 10.66%
+* 4ms Beats 41%
 
 ```java
 class Solution {
 
-    static class Node {
+    class Node {
         TreeNode root;
         int col;
 
@@ -41,9 +41,7 @@ class Solution {
 
                 Node tmp = queue.poll();
 
-                if (!levelColMap.containsKey(tmp.col)) {
-                    levelColMap.put(tmp.col, new ArrayList<>());
-                }
+                levelColMap.putIfAbsent(tmp.col, new ArrayList<>());
 
                 levelColMap.get(tmp.col).add(tmp.root.val);
 
@@ -61,11 +59,9 @@ class Solution {
             levelColMap.forEach((key, value) -> {
                 Collections.sort(value);
 
-                if (!colToNodesMap.containsKey(key)) {
-                    colToNodesMap.put(key, value);
-                } else {
-                    colToNodesMap.get(key).addAll(value);
-                }
+                colToNodesMap.putIfAbsent(key, new ArrayList<>());
+
+                colToNodesMap.get(key).addAll(value);
             });
 
             count = newCount;
@@ -81,24 +77,25 @@ class Solution {
 }
 ```
 
-### Approach-2 2ms Beats 99.70%
+### Approach-2 1ms Beats 100%
 
 * reference - leetcode solutions
 
 ```java
 class Solution {
-    static class pair implements Comparable<pair> {
+    
+    static class Pair implements Comparable<Pair> {
         TreeNode node;
         int row;
         int col;
 
-        pair(TreeNode node, int row, int col) {
+        Pair(TreeNode node, int row, int col) {
             this.node = node;
             this.row = row;
             this.col = col;
         }
 
-        public int compareTo(pair o) {
+        public int compareTo(Pair o) {
             if (this.col != o.col) {
                 return this.col - o.col;
             } else if (this.row != o.row) {
@@ -109,29 +106,43 @@ class Solution {
     }
 
     public List<List<Integer>> verticalTraversal(TreeNode root) {
-        PriorityQueue<pair> q = new PriorityQueue<>();
-        dfs(root, 0, 0, q);
+        
+        PriorityQueue<Pair> pq = new PriorityQueue<>();
+
+        dfs(root, 0, 0, pq);
+
         List<List<Integer>> ans = new ArrayList<>();
-        while (!q.isEmpty()) {
+
+        while (!pq.isEmpty()) {
+
             List<Integer> k = new ArrayList<>();
-            int g = q.peek().col;
-            while (!q.isEmpty() && q.peek().col == g) {
-                pair curr = q.poll();
+
+            int g = pq.peek().col;
+
+            while (!pq.isEmpty() && pq.peek().col == g) {
+                
+                Pair curr = pq.poll();
+
                 k.add(curr.node.val);
             }
+
             ans.add(k);
         }
         return ans;
     }
 
-    static void dfs(TreeNode node, int row, int col, PriorityQueue<pair> q) {
+    static void dfs(TreeNode node, int row, int col, PriorityQueue<Pair> q) {
+        
         if (node == null)
             return;
-        pair newpair = new pair(node, row, col);
-        q.add(newpair);
-        dfs(node.left, row + 1, col - 1, q);
-        dfs(node.right, row + 1, col + 1, q);
 
+        Pair newpair = new Pair(node, row, col);
+
+        q.add(newpair);
+
+        dfs(node.left, row + 1, col - 1, q);
+
+        dfs(node.right, row + 1, col + 1, q);
     }
 }
 ```
