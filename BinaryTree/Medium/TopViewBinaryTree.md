@@ -27,17 +27,18 @@ class Solution
         ArrayList<Integer> result = new ArrayList<>();
         
         Queue<NodeIndex> queue = new LinkedList<>();
+        
         queue.add(new NodeIndex(root, 0));
         
         Map<Integer, Integer> indexMap = new TreeMap<>();
         
-        while(queue.size()>0){
+        while(!queue.isEmpty()){
             
             NodeIndex nodeIndex = queue.poll();
             Node node = nodeIndex.root;
-            if(!indexMap.containsKey(nodeIndex.index)){
-                indexMap.put(nodeIndex.index, node.data);
-            }
+            //if(!indexMap.containsKey(nodeIndex.index)){
+            indexMap.putIfAbsent(nodeIndex.index, node.data);
+            //}
             
             if(node.left!=null){
                 queue.add(new NodeIndex(node.left, nodeIndex.index-1));   
