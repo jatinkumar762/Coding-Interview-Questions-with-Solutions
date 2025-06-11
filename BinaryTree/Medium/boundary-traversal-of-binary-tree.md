@@ -1,5 +1,7 @@
 https://www.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1
 
+https://leetcode.com/problems/boundary-of-binary-tree/description/
+
 ### Approach - 1
 
 * left boundary traversal
