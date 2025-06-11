@@ -20,35 +20,44 @@ https://leetcode.com/problems/binary-tree-right-side-view/description/
  */
 class Solution {
     public List<Integer> rightSideView(TreeNode root) {
-        
+
         List<Integer> result = new ArrayList<Integer>();
 
-        if(root==null) return result;
+        if (root == null)
+            return result;
 
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
-        while(queue.size()>0){
+        int size = 1;
 
-            int size = queue.size();
+        while (!queue.isEmpty()) {
 
-            for(int i=0;i<size;i++) {
+            //int size = queue.size();
+            int nextCount = 0;
+
+            for (int i = 0; i < size; i++) {
 
                 root = queue.poll();
 
-                if(i==0){
+                if (i == 0) {
                     result.add(root.val);
                 }
 
-                if(root.right!=null){
+                //adding first right
+                if (root.right != null) {
                     queue.add(root.right);
+                    nextCount++;
                 }
 
-                if(root.left!=null){
+                if (root.left != null) {
                     queue.add(root.left);
+                    nextCount++;
                 }
 
             }
+
+            size = nextCount;
         }
 
         return result;
@@ -57,6 +66,8 @@ class Solution {
 ```
 
 **Different way**
+
+&rarr; slower approach 
 
 ```java
 class Solution {
@@ -75,10 +86,8 @@ class Solution {
 
         // from each level only one rightmost node will part of result
 
-        List<Integer> result = new ArrayList<>();
-
         if (root == null) {
-            return result;
+            return new ArrayList<>();
         }
 
         Queue<Node> queue = new LinkedList<>();
@@ -95,9 +104,7 @@ class Solution {
 
                 Node tmp = queue.poll();
 
-                if (!levelToNode.containsKey(tmp.level)) {
-                    levelToNode.put(tmp.level, tmp.node.val);
-                }
+                levelToNode.putIfAbsent(tmp.level, tmp.node.val);
 
                 if (tmp.node.right != null) {
                     queue.add(new Node(tmp.level + 1, tmp.node.right));
@@ -115,9 +122,7 @@ class Solution {
             nextCount = 0;
         }
 
-        levelToNode.forEach((k, v) -> result.add(v));
-
-        return result;
+        return new ArrayList<>(levelToNode.values());
     }
 }
 ```
