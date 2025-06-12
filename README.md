@@ -395,6 +395,7 @@
   - [x] [Count Number of Nice Subarrays](./SlidingWindow/Medium/CountNumberOfNiceSubarrays.md)
   - [x] [Number of Substrings Containing All Three Characters](./SlidingWindow/Medium/NumberOfSubstringsContainingAllThreeCharacters.md)
   - [x] [Maximum Points You Can Obtain from Cards](./SlidingWindow/Medium/MaximumPointsYouCanObtainFromCards.md)
+  - [x] [Container With Most Water](./SlidingWindow/Medium/container-with-most-water.md)
 
 ## Greedy Algorithms
 
