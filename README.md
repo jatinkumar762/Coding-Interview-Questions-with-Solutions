@@ -210,6 +210,7 @@
    - [x] [Sort Characters By Frequency](./String/Medium/SortCharactersByFrequency.md)
    - [x] [Minimum Add to Make Parentheses Valid](./String/Easy/minimum-add-to-make-parentheses-valid.md)
    - [x] [Count and Say](./String/Easy/count-and-say.md)
+   - [x] [Add Strings](./String/Easy/add-strings.md)
 
    ### Medium
    - [x] [Valid Substring](./String/ValidSubstring.md)
