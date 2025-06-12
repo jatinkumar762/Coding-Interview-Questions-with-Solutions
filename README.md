@@ -333,7 +333,7 @@
   - [x] [Requirements needed to construct a Unique Binary Tree | Theory](./BinaryTree/Hard/Construct%20a%20Unique%20Binary%20Tree.md)
   - [x] [Flatten Binary Tree to Linked List](./BinaryTree/Hard/FlattenBinaryTreetoLinkedList.md)
   - [x] [Construct Binary Tree from Preorder and Inorder Traversal](./BinaryTree/Hard/construct-binary-tree-from-preorder-and-inorder-traversal.md)
-  - [x] [Construct Binary Tree from Inorder and Postorder Traversal](./BinaryTree/Hard/construct- binary-tree-from-inorder-and-postorder-traversal.md)
+  - [x] [Construct Binary Tree from Inorder and Postorder Traversal](./BinaryTree/Hard/construct-binary-tree-from-inorder-and-postorder-traversal.md)
 
 ## Binary Search Tree
   ### Easy
