@@ -189,6 +189,9 @@
   - [x] [Spiral Matrix](./Array/Medium/SpiralMatrix.md)
   - [x] [Subarray Sum Equals K](./Array/Medium/SubarraySumEqualsK.md)
 
+  ### prefix sum
+  - [x] [Zero Array Transformation I](./Array/prefix-sum/zero-array-transformation-i.md)
+
 ## String
    ### Easy
    - [x] [Longest K unique characters substring](./String/LongestKUniqueCharactersSubstring.md)
