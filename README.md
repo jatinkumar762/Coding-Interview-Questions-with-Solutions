@@ -83,6 +83,7 @@
 ## Maths Problem
   ### Easy
   - [x] [Missing Number](./Maths/Missing%20Number.md)
+  - [x] [Maximum Difference by Remapping a Digit]()
 
 ## Recursion
   - [x] [Combination Sum](./Recursion/CombinationSum.md)
