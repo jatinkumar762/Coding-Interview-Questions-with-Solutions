@@ -63,3 +63,5 @@ class Solution {
     }
 }
 ```
+
+Time Complexity: $O(3^N)$ where n is length of string
