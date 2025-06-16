@@ -530,16 +530,15 @@
 
 ## Tries
 
-  - [x] [Implement TRIE | INSERT | SEARCH | STARTSWITH](./Trie/Trie.md)
-  - [x] [Implement TRIE-ii Prefix-tree](./Trie/Trie-ii.md)
-  - [x] [Longest String with All Prefixes](./Trie/LongestStringWithAllPrefixes.md)
-  - [x] [Count of distinct substrings](./Trie/CountofDistinctSubstrings.md)
+- [x] [Implement TRIE | INSERT | SEARCH | STARTSWITH](./Trie/Trie.md)
+- [x] [Implement TRIE-ii Prefix-tree](./Trie/Trie-ii.md)
+- [x] [Longest String with All Prefixes](./Trie/LongestStringWithAllPrefixes.md)
+- [x] [Count of distinct substrings](./Trie/CountofDistinctSubstrings.md)
 
 
-## Good Resources
+## Design
 
-* https://github.com/xizhengszhang/Leetcode_company_frequency
-
+- [x] [Design Hit Counter](./Design/Medium/design-hit-counter.md)
 
 
 
