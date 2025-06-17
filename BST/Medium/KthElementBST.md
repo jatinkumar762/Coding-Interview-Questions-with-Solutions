@@ -1,5 +1,7 @@
 https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
 
+* perform in-order traversal
+
 ```java
 /**
  * Definition for a binary tree node.
