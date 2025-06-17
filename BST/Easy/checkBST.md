@@ -33,4 +33,39 @@ class Solution {
 
 *  for optimization - without recursion - In order traversal using stack - and use property that during traversal current node val should be greater than prev node val
 
+- in-order traversal of bst always increasing order elements
+
 [Editorial](https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/)
+
+
+```java
+class Solution {
+    public boolean isValidBST(TreeNode root) {
+
+        Integer left = null;
+        Stack<TreeNode> stack = new Stack<>();
+
+        while (root != null || !stack.isEmpty()) {
+
+            while (root != null) {
+
+                stack.push(root);
+
+                root = root.left;
+            }
+
+            root = stack.pop();
+
+            if (left != null && left >= root.val) {
+                return false;
+            }
+
+            left = root.val;
+
+            root = root.right;
+        }
+
+        return true;
+    }
+}
+```
