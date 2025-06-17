@@ -326,6 +326,7 @@
   - [x] [Binary Tree Right Side View](./BinaryTree/Medium/BinaryTreeRightSideView.md)
   - [x] [Symmetric Tree](./BinaryTree/Medium/SymmetricTree.md)
   - [x] [Longest Univalue Path](./BinaryTree/Medium/longest-univalue-path.md)
+  - [x] [Sum Root to Leaf Numbers](./BinaryTree/Medium/sum-root-to-leaf-numbers.md)
     
   ### Hard
 
