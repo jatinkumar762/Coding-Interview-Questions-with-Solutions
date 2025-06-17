@@ -27,7 +27,7 @@ class Solution {
             
             if(s.charAt(i) == s.charAt(j)){
                 
-                count[j] = i+1;
+                count[j] = i+1; //length of prefix
                 j++; i++;
             
             } else {
