@@ -134,7 +134,7 @@
   - [x] [Add 2 numbers in LL](./LinkedList/Medium/Add2NumbersLL.md)
   - [x] [Add 1 to a Linked List Number](./LinkedList/Medium/Add1LinkedList.md)
   - [x] [Delete the Middle Node of a Linked List](./LinkedList/Medium/DeleteMiddleNodeLinkedList.md)
-
+  - [x] [Copy List with Random Pointer](./LinkedList/Medium/copy-list-with-random-pointer.md)
 
   #### Doubly LinkedList
   - [x] [Delete all occurrences of a given key in a doubly linked list](./LinkedList/DLL/DeleteAllOccurrencesOfKey.md)
