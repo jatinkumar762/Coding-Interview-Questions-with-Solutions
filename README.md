@@ -338,6 +338,7 @@
   - [x] [Flatten Binary Tree to Linked List](./BinaryTree/Hard/FlattenBinaryTreetoLinkedList.md)
   - [x] [Construct Binary Tree from Preorder and Inorder Traversal](./BinaryTree/Hard/construct-binary-tree-from-preorder-and-inorder-traversal.md)
   - [x] [Construct Binary Tree from Inorder and Postorder Traversal](./BinaryTree/Hard/construct-binary-tree-from-inorder-and-postorder-traversal.md)
+  - [x] [Serialize and Deserialize BST](./BinaryTree/Hard/serialize-and-deserialize-bst.md)
 
 ## Binary Search Tree
   ### Easy
