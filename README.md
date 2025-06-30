@@ -383,6 +383,7 @@
   - [x] [Hand of Straights](./Heap/Medium/hand-of-straights.md)
   - [x] [Reorganize String](./Heap/Medium/reorganize-string.md)
   - [x] [Find K Pairs with Smallest Sums](./Heap/Medium/find-k-pairs-with-smallest-sums.md)
+  - [x] [K Closest Points to Origin](./Heap/Medium/k-closest-points-to-origin.md)
 
 ## Sliding Window
   ### Easy
