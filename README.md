@@ -500,11 +500,11 @@
   - [x] [Island Perimeter](./Graphs/Medium/IslandPerimeter.md)
   - [x] [Rotting Oranges](./Graphs/Medium/RottingOranges.md)
   - [x] [Detect Cycle in an Undirected Graph - BFS & DFS Approach](./Graphs/Medium/DetectCycleUndirectedGraph.md)
+  - [x] [Detect Cycle in a Directed Graph - DFS](./Graphs/Medium/DirectedGraphCycle_DFS.md)
   - [x] [01 Matrix](./Graphs/Medium/01%20Matrix.md)
   - [x] [Number of Enclaves](./Graphs/Medium/NumberOfEnclaves.md)
   - [x] [Surrounded Regions](./Graphs/Medium/SurroundedRegions.md)
   - [x] [Is Graph Bipartite?](./Graphs/Medium/IsGraphBipartite.md)
-  - [x] [Detect Cycle in a Directed Graph - DFS](./Graphs/Medium/DirectedGraphCycle_DFS.md)
   - [x] [Bridges in Graph](./Graphs/Medium/BridgesInGraph.md)
   - [x] [Bipartite Graph](./Graphs/Medium/BipartiteGraph.md)
 
