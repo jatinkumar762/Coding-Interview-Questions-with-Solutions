@@ -434,7 +434,7 @@
   ### 1D DP
   - [x] [Introduction to DP](./DynamicProgramming/1D_DP/Introduction_to_DP.md)
   - [x] [Climbing Stairs](./DynamicProgramming/1D_DP/ClimbingStairs.md)
-  - [x] [Frog Jump](./DynamicProgramming/1D_DP/GeekJump.md)
+  - [x] [Frog Jump](./DynamicProgramming/1D_DP/FrogJump.md)
   - [x] [Frog Jump with k Distances/Minimal Cost](./DynamicProgramming/1D_DP/Frog_Jump_with_k_Distances.md)
   - [x] [House Robber/Maximum sum of non-adjacent elements](./DynamicProgramming/1D_DP/HouseRobber.md)
   - [x] [House Robber II](./DynamicProgramming/1D_DP/house-robber-ii.md)

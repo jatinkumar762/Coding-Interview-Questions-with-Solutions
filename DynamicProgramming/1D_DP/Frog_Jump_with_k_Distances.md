@@ -51,10 +51,9 @@ class Solution {
 
 ```java
 class Solution {
-    
     int[] dp;
        
-    public int minimizeCost(int arr[], int k) {
+    public int minimizeCost(int k, int arr[]) {
         // code here
         int N = arr.length;
         
@@ -62,14 +61,14 @@ class Solution {
         
         dp[0] = 0;
         
-        for(int i=1;i<N;i++){
+        for(int i = 1; i < N; i++){
             
             int res = Integer.MAX_VALUE, cost = Integer.MAX_VALUE;
 
-            for(int j=1;j<=k;j++) {
-                if(i-j>=0){
-                    cost = dp[i-j] + Math.abs(arr[i] - arr[i-j]);
-                }
+            for(int j=1; (i- j) >= 0 && j<=k; j++) {
+
+                cost = dp[i-j] + Math.abs(arr[i] - arr[i-j]);
+                
                 res = res < cost ? res : cost;
             }
             
