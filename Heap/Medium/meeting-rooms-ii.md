@@ -1,5 +1,8 @@
 https://leetcode.com/problems/meeting-rooms-ii/description/
 
+**Similar Problem** - https://leetcode.com/problems/meeting-rooms-ii/editorial/
+
+
 
 ### Sorting + Heap
 

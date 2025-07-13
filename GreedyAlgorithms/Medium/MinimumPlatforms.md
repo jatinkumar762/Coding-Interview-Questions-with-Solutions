@@ -1,5 +1,6 @@
 https://www.geeksforgeeks.org/problems/minimum-platforms-1587115620/1
 
+**Similar Problem** - https://leetcode.com/problems/meeting-rooms-ii/description/
 
 #### Approach-1 Brute Force - $O(N^2)$
 
