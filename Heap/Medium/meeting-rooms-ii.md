@@ -58,3 +58,47 @@ class Solution {
     }
 }
 ```
+
+**Optimization**
+
+- Use int[] directly,	saves object creation.
+
+```java
+class Solution {
+
+    public int minMeetingRooms(int[][] intervals) {
+
+        if (intervals == null || intervals.length == 0)
+            return 0;
+
+        // Sort by start time
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+
+        // Min-heap to track the earliest ending meeting
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+
+        pq.add(intervals[0][1]);
+
+        int maxRoom = 1;
+        int len = intervals.length;
+        int count = 1;
+
+        for (int i = 1; i < len; i++) {
+
+            while (!pq.isEmpty() && (pq.peek() <= intervals[i][0])) {
+                pq.poll();
+                count--;
+            }
+
+            pq.add(intervals[i][1]);
+            count++;
+
+            if (maxRoom < count) {
+                maxRoom = count;
+            }
+        }
+
+        return maxRoom;
+    }
+}
+```
