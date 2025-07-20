@@ -282,3 +282,74 @@ class LRUCache {
     }
 }
 ```
+
+### Approach - 4 Using In-built library
+
+```java
+
+import java.util.*;
+import java.lang.*;
+
+class LRUCache<K,V> {
+    
+    private int capacity;
+    private LinkedHashMap<K, V> map;
+    
+    public LRUCache(int capacity){
+        
+        this.capacity = capacity;
+        
+        map = new LinkedHashMap<>(capacity, 0.75f, true){
+            
+            protected boolean removeEldestEntry(Map.Entry<K, V> entry){
+                
+                return size() > capacity;   
+                
+            }
+        };
+    }
+    
+    public synchronized void put(K key, V value){
+        map.put(key, value);
+    }
+    
+    public synchronized V get(K key){
+        return map.getOrDefault(key, null);
+    }
+}
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    LRUCache<Integer, Integer> lruCache = new LRUCache<>(2);
+	    
+	    lruCache.put(1, 1);
+	    lruCache.put(2, 2);
+	    
+	    System.out.println(lruCache.get(1));
+	    
+	    lruCache.put(3, 3);
+	    
+	    System.out.println(lruCache.get(2));
+	    
+	    System.out.println(lruCache.get(3));
+	    
+	    System.out.println("*********************");
+	    
+	    LRUCache<Integer, String> lruCacheStr = new LRUCache<>(2);
+	    
+	    lruCacheStr.put(1, "1");
+	    lruCacheStr.put(2, "2");
+	    
+	    System.out.println(lruCacheStr.get(1));
+	    
+	    lruCacheStr.put(3, "3");
+	    
+	    System.out.println(lruCacheStr.get(2));
+	    
+	    System.out.println(lruCacheStr.get(3));
+	}
+}
+```
