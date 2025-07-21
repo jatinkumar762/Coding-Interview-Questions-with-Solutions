@@ -242,9 +242,9 @@ class LRUCache {
 
             if (count == capacity) {
 
-                keyToValue.remove(tail.prev.key);
+                keyToValue.remove(tail.prev.key); //remove from map
 
-                remove(tail.prev);
+                remove(tail.prev); //remove from DLL
             } else {
 
                 count += 1;
