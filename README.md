@@ -195,7 +195,7 @@
   - [x] [Zero Array Transformation I](./Array/prefix-sum/zero-array-transformation-i.md)
 
   ### Hashing
-  - [x] [Insert Delete GetRandom O(1)](./Array/Hashing/insert-delete-getrandom-o1.md)
+  - [x] :star: [Insert Delete GetRandom O(1)](./Array/Hashing/insert-delete-getrandom-o1.md)
 
 ## String
    ### Easy
