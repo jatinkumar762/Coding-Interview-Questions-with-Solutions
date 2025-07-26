@@ -238,8 +238,8 @@
    - [x] [Longest Palindromic Substring](./String/Medium/LongestPalindromicSubstring.md)
    - [x] [Reverse Words in a String](./String/Medium/ReverseWordsinaString.md)
 
-   - [x] [Shortest Word Distance](./String/Medium/shortest-word-distance.md)
-   - [x] [Shortest Word Distance II](./String/Medium/shortest-word-distance-ii.md)
+   - [x] :star: [Shortest Word Distance](./String/Medium/shortest-word-distance.md)
+   - [x] :star: [Shortest Word Distance II](./String/Medium/shortest-word-distance-ii.md)
 
    ### Hard
    - [x] [Minimum characters to be added at front to make string palindrome](./String/Hard/AddCharactersFrontMakeStringPalindrome.md)
