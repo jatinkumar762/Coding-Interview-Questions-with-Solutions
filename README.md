@@ -71,6 +71,7 @@
   - [x] [K-th element of two Sorted Arrays](./BinarySearch/BS_on_Result/k-th-element-of-two-sorted-array.md)
   - [x] [Kth Missing Positive Number](./BinarySearch/BS_on_Result/kth-missing-positive-number.md)
   - [x] [Aggressive cows](./BinarySearch/BS_on_Result/AggressiveCows.md)
+  - [x] [Sum of Mutated Array Closest to Target](./BinarySearch/BS_on_Result/sum-of-mutated-array-closest-to-target.md)
 
   ### BS on 2D-Arrays
   - [x] [Find the row with maximum number of 1's](./BinarySearch/BS_on_2D-Arrays/Row_with_max_1s.md)
