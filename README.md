@@ -395,6 +395,7 @@
   - [x] [Count Occurrences of Anagrams](./SlidingWindow/Easy/CountOccurencesofAnagrams.md)
   - [x] [Max Sum Subarray of size K](./SlidingWindow/Easy/MaxSumSubarraySizeK.md)
   - [x] [First negative in every window of size k](./SlidingWindow/Easy/FirstNegativeEveryWindowSizeK.md)
+  - [x] [Minimum Size Subarray Sum](./SlidingWindow/Easy/minimum-size-subarray-sum.md)
 
   ### Medium
   - [x] [Longest Substring Without Repeating Characters](./SlidingWindow/Medium/LongestSubstringWithoutRepeatingCharacters.md)
