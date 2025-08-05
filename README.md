@@ -413,6 +413,9 @@
   - [x] [Container With Most Water](./SlidingWindow/Medium/container-with-most-water.md)
   - [x] [Find All Anagrams in a String](./SlidingWindow/Medium/find-all-anagrams-in-a-string.md)
 
+  ### Hard
+  - [x] [Minimum Window Substring](./SlidingWindow/Hard/minimum-window-substring.md)
+
 ## Greedy Algorithms
 
   ### Easy
