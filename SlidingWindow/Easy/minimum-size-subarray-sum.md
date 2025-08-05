@@ -38,3 +38,37 @@ class Solution {
     }
 }
 ```
+
+**Optimization**
+
+```java
+class Solution {
+    public int minSubArrayLen(int target, int[] nums) {
+
+        int left = 0;
+        int right = 0;
+        int N = nums.length;
+
+        int sum = 0;
+        int min = Integer.MAX_VALUE;
+
+        while (right < N) {
+
+            sum += nums[right];
+
+            while (sum >= target && left <= right) {
+                
+                min = Math.min(right - left + 1, min);
+
+                sum -= nums[left];
+
+                left++;
+            }
+
+            right++;
+        }
+
+        return min == Integer.MAX_VALUE ? 0 : min;
+    }
+}
+```
