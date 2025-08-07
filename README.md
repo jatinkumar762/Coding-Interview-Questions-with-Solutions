@@ -517,6 +517,7 @@
   - [x] [Is Graph Bipartite?](./Graphs/Medium/IsGraphBipartite.md)
   - [x] [Bridges in Graph](./Graphs/Medium/BridgesInGraph.md)
   - [x] [Bipartite Graph](./Graphs/Medium/BipartiteGraph.md)
+  - [x] [Snakes and Ladders](./Graphs/Medium/snakes-and-ladders.md)
 
   ### Topo Sort and Problems
 
@@ -537,7 +538,6 @@
    - [x] [Shortest Path in Binary Matrix](./Graphs/ShortestPathAlgorithmsAndProblems/ShortestPathBinaryMatrix.md)
    - [x] [Path With Minimum Effort](./Graphs/ShortestPathAlgorithmsAndProblems/path-with-minimum-effort.md)
    - [x] [Floyd Warshall Algorithm](./Graphs/ShortestPathAlgorithmsAndProblems/FloydWarshallAlgorithm.md)
-
 
   ### MinimumSpanningTree/DisjointSet Problems
 
