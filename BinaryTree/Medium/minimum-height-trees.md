@@ -71,3 +71,57 @@ class Solution {
     }
 }
 ```
+
+### Topological Sorting
+
+```java
+class Solution {
+    public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+
+        if (n == 1) return Collections.singletonList(0);
+
+        List<Set<Integer>> graph = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            graph.add(new HashSet<Integer>());
+        }
+
+        for (int[] edge : edges) {
+            graph.get(edge[0]).add(edge[1]);
+            graph.get(edge[1]).add(edge[0]);
+        }
+
+        List<Integer> leafNodes = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+
+            if (graph.get(i).size() <= 1) {
+                leafNodes.add(i);
+            }
+        }
+
+
+        while (n > 2) {
+
+            n -= leafNodes.size();
+
+            List<Integer> newLeafs = new ArrayList<>();
+
+            for (Integer leaf : leafNodes) {
+
+                int nbr = graph.get(leaf).iterator().next();
+
+                graph.get(nbr).remove(leaf);
+
+                if (graph.get(nbr).size() == 1) {
+                    newLeafs.add(nbr);
+                }
+            }
+
+            leafNodes = newLeafs;
+        }
+
+        return leafNodes;
+    }
+}
+```
