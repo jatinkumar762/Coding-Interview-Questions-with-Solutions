@@ -47,3 +47,11 @@ class Solution {
     }
 }
 ```
+
+**Time Complexity:** $O(N)$
+
+- We enumerate each node in the tree once and only once via recursion.
+
+**Space Complexity:** $O(N)$
+
+- In the worst case where all the nodes are chained up in a single path, the recursion will pile up $O(N)$ times.
