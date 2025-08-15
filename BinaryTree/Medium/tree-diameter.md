@@ -71,3 +71,26 @@ class Solution {
     }
 }
 ```
+
+#### Complexity Analysis
+
+Let $N$ be the number of nodes in the graph, then the number of edges in the graph would be $N−1$ as specified in the problem.
+
+**Time Complexity:** $O(N)$
+
+- First we iterate through all edges to build an adjacency list representation of the graph. The time complexity of this step would be O(N).
+- In the main algorithm, we perform the BFS traversal twice on the graph. Each traversal will take O(N) time, where we visit each node once and only once.
+- To sum up, the overall time complexity of the algorithm is $O(N) + 2⋅O(N) = O(N)$
+
+**Space Complexity:** $O(N)$
+
+-  adjacency list 
+   -  proportional to the total number of nodes and edges in the graph
+   -  Since the graph is undirected (i.e. the edge is bi-directional), the number of neighbors in the adjacency list would be twice the number of edges.
+   -  the space needed for the graph would be $O(N+2⋅N) = O(N)$
+-  visited[]
+   -  $O(N)$
+-  queue
+   -  $O(N)$
+-  overall space complexity - $O(N) + O(N) + O(N) = O(N)$
+
