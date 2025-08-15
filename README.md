@@ -336,6 +336,7 @@
   - [x] [Sum Root to Leaf Numbers](./BinaryTree/Medium/sum-root-to-leaf-numbers.md)
   - [x] [Minimum Height Trees](./BinaryTree/Medium/minimum-height-trees.md)
   - [x] [Tree Diameter](./BinaryTree/Medium/tree-diameter.md) 
+  - [x] [Diameter of N-Ary Tree](./BinaryTree/Medium/diameter-of-n-ary-tree.md) 
     
   ### Hard
 
