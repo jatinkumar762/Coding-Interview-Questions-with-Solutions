@@ -335,6 +335,7 @@
   - [x] [Longest Univalue Path](./BinaryTree/Medium/longest-univalue-path.md)
   - [x] [Sum Root to Leaf Numbers](./BinaryTree/Medium/sum-root-to-leaf-numbers.md)
   - [x] [Minimum Height Trees](./BinaryTree/Medium/minimum-height-trees.md)
+  - [x] [Tree Diameter](./BinaryTree/Medium/tree-diameter.md) 
     
   ### Hard
 
