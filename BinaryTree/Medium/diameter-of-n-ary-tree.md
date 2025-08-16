@@ -1,6 +1,6 @@
 https://leetcode.com/problems/diameter-of-n-ary-tree/
 
-### DFS
+### DFS - Distance with Height
 
 ```java
 class Solution {
@@ -55,3 +55,6 @@ class Solution {
 **Space Complexity:** $O(N)$
 
 - In the worst case where all the nodes are chained up in a single path, the recursion will pile up $O(N)$ times.
+
+### Approach 2: Distance with Depth
+
