@@ -21,17 +21,5 @@ class Solution {
 
         return res[N];
     }
-
-    private int findMinCost(int[] cost, int current, int dest) {
-
-        if (current > dest) {
-            return 0;
-        }
-
-        int step1 = cost[current] + findMinCost(cost, current + 1, dest);
-        int step2 = cost[current] + findMinCost(cost, current + 2, dest);
-
-        return Math.min(step1, step2);
-    }
 }
 ```
