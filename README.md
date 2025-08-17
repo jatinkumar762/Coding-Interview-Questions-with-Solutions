@@ -475,6 +475,7 @@
   - [x] [Knapsack with Duplicate Items](./DynamicProgramming/DP_on_Subsequences/KnapsackwithDuplicateItems.md)
   - [x] [Rod Cutting](./DynamicProgramming/DP_on_Subsequences/RodCutting.md)
   - [x] [Maximum Alternating Subsequence Sum](./DynamicProgramming/DP_on_Subsequences/maximum-alternating-subsequence-sum.md)
+  - [x] [Minimum Cost For Tickets](./DynamicProgramming/DP_on_Subsequences/minimum-cost-for-tickets.md)
 
   ### DP on Strings
   - [x] [Longest Common Subsequence](./DynamicProgramming/DP_on_Strings/LongestCommonSubsequence.md)
