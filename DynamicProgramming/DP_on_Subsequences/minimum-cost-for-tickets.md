@@ -124,8 +124,38 @@ class Solution {
 }
 ```
 
-### Approach - 2
+### Approach - 2 Bottom Up Dynamic Programming
 
 ```java
+class Solution {
 
+    public int mincostTickets(int[] days, int[] costs) {
+
+        int len = days.length;
+
+        int lastDay = days[len - 1];
+
+        int[] dp = new int[lastDay + 1];
+
+        int index = 0;
+
+        for (int day = 1; day <= lastDay; day++) {
+
+            if (day < days[index]) {
+                dp[day] = dp[day - 1];
+            } else {
+                // Buy a pass on this day, and move on to the next travel day.
+                index++;
+
+                // Store the cost with the minimum of the three options.
+                dp[day] = Math.min(dp[day - 1] + costs[0],
+                        Math.min(dp[Math.max(0, day - 7)] + costs[1],
+                                dp[Math.max(0, day - 30)] + costs[2]));
+            }
+
+        }
+
+        return dp[lastDay];
+    }
+}
 ```
