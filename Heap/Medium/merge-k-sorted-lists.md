@@ -1,29 +1,19 @@
 https://leetcode.com/problems/merge-k-sorted-lists/description/
 
-### Using PriorityQueue - 5ms Beats 36%
+### MergeSort similar - Divide and Conquer
 
 ```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- * int val;
- * ListNode next;
- * ListNode() {}
- * ListNode(int val) { this.val = val; }
- * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
 class Solution {
-
-    class Node {
-        int val;
-        ListNode nodeIndex;
-
-        public Node(int v, ListNode n) {
-            this.val = v;
-            this.nodeIndex = n;
-        }
-    }
 
     public ListNode mergeKLists(ListNode[] lists) {
 
@@ -33,34 +23,69 @@ class Solution {
             return null;
         }
 
-        PriorityQueue<Node> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
-
-        for (int i = 0; i < len; i++) {
-            if (lists[i] != null) {
-                pq.add(new Node(lists[i].val, lists[i]));
-            }
+        if (len == 1) {
+            return lists[0];
         }
 
-        ListNode result = null, tail = null;
+        return mergeKLists(lists, 0, len - 1);
+    }
 
-        while (!pq.isEmpty()) {
+    private ListNode mergeKLists(ListNode[] lists, int start, int end) {
 
-            Node min = pq.remove();
+        if (start == end) {
+            return lists[start];
+        }
 
-            if (result == null) {
-                result = tail = new ListNode(min.val);
+        int mid = start + (end - start) / 2;
+
+        ListNode left = mergeKLists(lists, start, mid);
+
+        ListNode right = mergeKLists(lists, mid + 1, end);
+
+        return mergeTwoList(left, right);
+    }
+
+    private ListNode mergeTwoList(ListNode list1, ListNode list2) {
+
+        if (list1 == null) {
+            return list2;
+        }
+
+        if (list2 == null) {
+            return list1;
+        }
+
+        ListNode head = null, tail = null;
+
+        while (list1 != null && list2 != null) {
+
+            if (list1.val <= list2.val) {
+
+                if (head == null) {
+                    head = tail = new ListNode(list1.val);
+                } else {
+                    tail.next = new ListNode(list1.val);
+                    tail = tail.next;
+                }
+
+                list1 = list1.next;
+
             } else {
-                tail.next = new ListNode(min.val);
-                tail = tail.next;
-            }
 
-            ListNode nextCandidate = min.nodeIndex.next;
-            if (nextCandidate != null) {
-                pq.add(new Node(nextCandidate.val, nextCandidate));
+                if (head == null) {
+                    head = tail = new ListNode(list2.val);
+                } else {
+                    tail.next = new ListNode(list2.val);
+                    tail = tail.next;
+                }
+
+                list2 = list2.next;
             }
         }
 
-        return result;
+        tail.next = list1 != null ? list1 : list2;
+
+        return head;
     }
 }
 ```
