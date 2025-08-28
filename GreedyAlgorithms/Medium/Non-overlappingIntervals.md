@@ -1,5 +1,15 @@
 https://leetcode.com/problems/non-overlapping-intervals/description/
 
+```
+Arrays.sort(intervals, (a, b) -> {
+    int cmp = Integer.compare(a[1], b[1]); // first compare by end
+    if (cmp == 0) {
+        return Integer.compare(a[0], b[0]); // if same, compare by start
+    }
+    return cmp;
+});
+```
+
 ```java
 class Solution {
     public int eraseOverlapIntervals(int[][] intervals) {
