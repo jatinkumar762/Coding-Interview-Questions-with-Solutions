@@ -59,6 +59,7 @@
   - [x] [Minimum in a Sorted and Rotated](./BinarySearch/1-D_Array/Minimum_in_a_Sorted_and_Rotated.md)
   - [x] [Find out how many times the array has been rotated](./BinarySearch/1-D_Array/Find_Kth_Rotation.md)
   - [x] [Find Peak Element](./BinarySearch/1-D_Array/FindPeakElement.md)
+  - [x] [Find Minimum in Rotated Sorted Array](./BinarySearch/1-D_Array/find-minimum-in-rotated-sorted-array.md)
 
   ### BS on Result
   - [x] [Sqrt(x)](./BinarySearch/BS_on_Result/Sqrt.md)
