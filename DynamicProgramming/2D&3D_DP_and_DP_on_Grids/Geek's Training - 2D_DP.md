@@ -127,3 +127,82 @@ class Solution {
 
 ### Bottom-Up Approach
 
+```java
+
+class Solution {
+    public int maximumPoints(int arr[][]) {
+        // code here
+        
+        int N = arr.length;
+        
+        int[][] dp = new int[N][3];
+        
+        
+        for(int activity = 0 ; activity < 3; activity++){
+            dp[0][activity] = arr[0][activity];
+        }
+        
+        
+        for(int index = 1; index < N; index++){
+            
+            for(int activity = 0; activity < 3; activity++){
+                
+                dp[index][activity] =  arr[index][activity] + findPrevMax(dp[index-1], activity);
+                
+            }
+        }
+        
+        return Math.max(dp[N-1][0], Math.max(dp[N-1][1], dp[N-1][2]));
+    }
+    
+    
+    private int findPrevMax(int[] arr, int selected){
+        
+        int max = Integer.MIN_VALUE;
+        
+        for(int prev = 0; prev < 3; prev++){
+            
+            if(prev!=selected){
+                
+                max = Math.max(max, arr[prev]);
+            }
+            
+        }
+        
+        return max;
+    }
+}
+```
+
+**Optimized Code**
+
+```java
+class Solution {
+    public int maximumPoints(int arr[][]) {
+        int N = arr.length;
+
+        // prev will store dp values of previous day
+        int[] prev = new int[3];
+        
+        // base case: day 0
+        for (int activity = 0; activity < 3; activity++) {
+            prev[activity] = arr[0][activity];
+        }
+
+        // iterate over remaining days
+        for (int day = 1; day < N; day++) {
+            int[] curr = new int[3];
+
+            // for each activity, pick the best from the other two
+            curr[0] = arr[day][0] + Math.max(prev[1], prev[2]);
+            curr[1] = arr[day][1] + Math.max(prev[0], prev[2]);
+            curr[2] = arr[day][2] + Math.max(prev[0], prev[1]);
+
+            prev = curr; // move to next day
+        }
+
+        // max from last day
+        return Math.max(prev[0], Math.max(prev[1], prev[2]));
+    }
+}
+```
