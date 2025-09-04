@@ -4,6 +4,89 @@ https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/description/
 * because we want to maintain relation with parent, which not possible in binary tree
 * once we build the graph, we can do bfs or dfs traversal from the target node
 
+### Implementing Parent Pointers
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+
+    List<Integer> result;
+
+    public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
+
+        Map<Integer, TreeNode> parentMap = findParentMap(root);
+
+        Set<Integer> visited = new HashSet<>();
+
+        result = new ArrayList<>();
+
+        findKDistance(target, visited, k, parentMap);
+
+        return result;
+    }
+
+    private void findKDistance(TreeNode current, Set<Integer> visited, int distance, Map<Integer, TreeNode> parentMap) {
+
+        if (current == null || visited.contains(current.val)) {
+            return;
+        }
+
+        visited.add(current.val);
+
+        if(distance == 0){
+            result.add(current.val);
+            return;
+        }
+
+        findKDistance(parentMap.get(current.val), visited, distance - 1, parentMap);
+
+        findKDistance(current.left, visited, distance - 1, parentMap);
+
+        findKDistance(current.right, visited, distance - 1, parentMap);
+    }
+
+    private Map<Integer, TreeNode> findParentMap(TreeNode tmp) {
+
+        Map<Integer, TreeNode> parentMap = new HashMap<>();
+
+        TreeNode parent = null;
+
+        Stack<TreeNode> stack = new Stack<>();
+
+        while (tmp != null || !stack.isEmpty()) {
+
+            while (tmp != null) {
+
+                parentMap.put(tmp.val, parent);
+
+                stack.push(tmp);
+
+                parent = tmp;
+
+                tmp = tmp.left;
+            }
+
+            tmp = stack.pop();
+
+            parent = tmp;
+
+            tmp = tmp.right;
+        }
+
+        return parentMap;
+    }
+
+}
+```
+
 ### Approach-1 Using BFS
 
 ```java
