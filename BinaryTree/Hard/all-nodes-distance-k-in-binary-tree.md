@@ -89,6 +89,9 @@ class Solution {
 
 ### Approach-1 Using BFS
 
+*  Map<Integer, List<Integer>> graph = new HashMap<>();
+   *  can solve using such map also
+
 ```java
 class Solution {
 
